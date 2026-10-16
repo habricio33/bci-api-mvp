@@ -1,0 +1,90 @@
+name: bci_api
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bci_api_app
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8086}:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      DB_HOST: ${DB_HOST:-db}
+      DB_PORT: ${DB_PORT:-5432}
+      DB_DATABASE: ${DB_DATABASE:-bci_cadastro}
+      DB_USERNAME: ${DB_USERNAME:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:-postgres}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - bci_api_net
+
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: bci_api_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_DATABASE:-bci_cadastro}
+      POSTGRES_USER: ${DB_USERNAME:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+    ports:
+      - "${DB_EXTERNAL_PORT:-5436}:5432"
+    volumes:
+      - bci_api_db_data:/var/lib/postgresql/data
+      - ./docker/initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${DB_USERNAME:-postgres} -d ${DB_DATABASE:-bci_cadastro}" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    networks:
+      - bci_api_net
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: bci_api_pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL:-admin@bci.com}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD:-admin123}
+      PGADMIN_CONFIG_CHECK_EMAIL_DELIVERABILITY: 'False'
+    ports:
+      - "${PGADMIN_PORT:-5056}:80"
+    depends_on:
+      - db
+    networks:
+      - bci_api_net
+
+  geoserver:
+    image: kartoza/geoserver:2.25.0
+    container_name: bci_api_geoserver
+    restart: unless-stopped
+    environment:
+      GEOSERVER_ADMIN_USER: ${GEOSERVER_ADMIN_USER:-admin}
+      GEOSERVER_ADMIN_PASSWORD: ${GEOSERVER_ADMIN_PASSWORD:-geoserver}
+      INITIAL_MEMORY: "512m"
+      MAXIMUM_MEMORY: "1024m"
+    ports:
+      - "${GEOSERVER_PORT:-8606}:8080"
+    volumes:
+      - bci_api_geoserver_data:/opt/geoserver/data_dir
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - bci_api_net
+
+volumes:
+  bci_api_db_data:
+    driver: local
+  bci_api_geoserver_data:
+    driver: local
+
+networks:
+  bci_api_net:
+    driver: bridge

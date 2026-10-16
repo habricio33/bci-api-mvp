@@ -1,0 +1,640 @@
+{
+  "cep": "29260-000",
+  "tipo": "01",
+  "codigo": 9909,
+  "codigoCib": "14HSV1N1",
+  "numero": "57",
+  "memorial": "ÁREA DA UNIDADE REMOVIDA CONFORME CERTIDÃO DE DEMOLIÇÃO APRESENTADA ATRAVÉS DO PROCESSO Nº 14374/2026.\nEM: 05/10/2026",
+  "complemento": "RESIDENCIA 1 PAV",
+  "dataInclusao": "2018-01-26",
+  "dataExclusao": "2026-10-13",
+  "dataAlteracao": null,
+  "processoInclusao": null,
+  "processoExclusao": "11999/2026",
+  "pessoa": {
+    "id": "03E3F9AB34AF5A468B25EFACB9BA698F",
+    "codigo": "0037404",
+    "nome": "VALCIMERIA BRAUN SPERANDIO",
+    "tipo": "F",
+    "fantasia": null,
+    "documento": "107.887.077-28",
+    "inscricaoEstadual": null
+  },
+  "logradouro": {
+    "id": "5C8B90B989F2AF69A2A0CE0DA5639D20",
+    "codigo": "00000308",
+    "nome": "KOEHLER",
+    "cep": "29260-000",
+    "pertenceMunicipio": "N",
+    "tipo": {
+      "id": "FB896452D4374AF86F4C6D6C7DF3DD79",
+      "sigla": "Avenida",
+      "descricao": "Avenida"
+    }
+  },
+  "bairro": {
+    "id": "937CDBB2304E146137CC5E1B9610A990",
+    "codigo": "000080",
+    "nome": "CENTRO",
+    "pertenceMunicipio": "N"
+  },
+  "cidade": {
+    "codigoIbge": "3201902",
+    "nome": "Domingos Martins",
+    "tipo": {
+      "sigla": "ES",
+      "descricao": "Espírito Santo"
+    }
+  },
+  "proprietarios": [],
+  "imobiliario": {
+    "lote": "0605",
+    "face": null,
+    "setor": "01",
+    "quadra": "023",
+    "unidade": "002",
+    "distrito": "01",
+    "matricula": null,
+    "edificacao": "",
+    "zoneamento": [],
+    "inscricaoCadastral": "01010230605002",
+    "situacao": {
+      "id": "E",
+      "descricao": "Baixado",
+      "motivo": ""
+    },
+    "segmentos": {},
+    "solicitacaoInscricao": {
+      "id": "N",
+      "descricao": "NENHUM"
+    },
+    "subUnidades": [],
+    "boletim": [
+      {
+        "campo": "9024",
+        "descricao": "FATOR LOCALIZACAO",
+        "boletim": [
+          {
+            "id": 1,
+            "descricao": "194,500000"
+          }
+        ]
+      },
+      {
+        "campo": "9025",
+        "descricao": "OCUPACAO",
+        "boletim": [
+          {
+            "id": 11,
+            "descricao": "NAO CONSTRUIDO"
+          }
+        ]
+      },
+      {
+        "campo": "9026",
+        "descricao": "SITUACAO DO TERRENO",
+        "boletim": [
+          {
+            "id": 77,
+            "descricao": "ESQUINA /DUAS FRENTES"
+          }
+        ]
+      },
+      {
+        "campo": "9027",
+        "descricao": "ULTILIZACAO DO IMOVEL",
+        "boletim": [
+          {
+            "id": 111,
+            "descricao": "RESIDENCIAL"
+          }
+        ]
+      },
+      {
+        "campo": "9028",
+        "descricao": "PEDOLOGIA",
+        "boletim": [
+          {
+            "id": 185,
+            "descricao": "NORMAL"
+          }
+        ]
+      },
+      {
+        "campo": "9029",
+        "descricao": "TOPOGRAFIA",
+        "boletim": [
+          {
+            "id": 211,
+            "descricao": "PLANO"
+          }
+        ]
+      },
+      {
+        "campo": "9030",
+        "descricao": "LIMITACAO",
+        "boletim": [
+          {
+            "id": 252,
+            "descricao": "COM CERCA/MURO"
+          }
+        ]
+      },
+      {
+        "campo": "9031",
+        "descricao": "PATRIMONIO",
+        "boletim": [
+          {
+            "id": 283,
+            "descricao": "PARTICULAR"
+          }
+        ]
+      },
+      {
+        "campo": "9032",
+        "descricao": "USO DO IMOVEL",
+        "boletim": [
+          {
+            "id": 310,
+            "descricao": "PROPRIO"
+          }
+        ]
+      },
+      {
+        "campo": "9033",
+        "descricao": "IMUNE_ISENTO IPTU(não calcular)",
+        "boletim": [
+          {
+            "id": 332,
+            "descricao": "NAO"
+          }
+        ]
+      },
+      {
+        "campo": "9034",
+        "descricao": "ISENTO TSU",
+        "boletim": [
+          {
+            "id": 355,
+            "descricao": "NAO"
+          }
+        ]
+      },
+      {
+        "campo": "9035",
+        "descricao": "ANO ISENTO",
+        "boletim": []
+      },
+      {
+        "campo": "9036",
+        "descricao": "MOTIVO ISENTO",
+        "boletim": []
+      },
+      {
+        "campo": "9037",
+        "descricao": "DESCONTO DE 10% CONFORME LEI 2353/11",
+        "boletim": []
+      },
+      {
+        "campo": "9038",
+        "descricao": "POSSUI APP",
+        "boletim": []
+      },
+      {
+        "campo": "9039",
+        "descricao": "DENTRO DO RAIO",
+        "boletim": []
+      },
+      {
+        "campo": "9040",
+        "descricao": "Tipo Desativação CIB",
+        "boletim": []
+      },
+      {
+        "campo": "9041",
+        "descricao": "Motivo Desativação CIB",
+        "boletim": []
+      },
+      {
+        "campo": "9042",
+        "descricao": "Texto Desativação CIB",
+        "boletim": [
+          {
+            "id": 1,
+            "descricao": "  "
+          }
+        ]
+      },
+      {
+        "campo": "10035",
+        "descricao": "CARACTERIZACAO",
+        "boletim": [
+          {
+            "id": 17,
+            "descricao": "CASA SOBRADO"
+          }
+        ]
+      },
+      {
+        "campo": "10036",
+        "descricao": "REVESTIMENTO EXTERNO",
+        "boletim": [
+          {
+            "id": 102,
+            "descricao": "OLEO"
+          }
+        ]
+      },
+      {
+        "campo": "10037",
+        "descricao": "PISO",
+        "boletim": [
+          {
+            "id": 176,
+            "descricao": "CERAMICA/MOSAICO"
+          }
+        ]
+      },
+      {
+        "campo": "10038",
+        "descricao": "FORRO",
+        "boletim": [
+          {
+            "id": 253,
+            "descricao": "LAGE"
+          }
+        ]
+      },
+      {
+        "campo": "10039",
+        "descricao": "COBERTURA",
+        "boletim": [
+          {
+            "id": 284,
+            "descricao": "FIBRO CIMENTO"
+          }
+        ]
+      },
+      {
+        "campo": "10040",
+        "descricao": "INSTALACAO SANITARIA",
+        "boletim": [
+          {
+            "id": 347,
+            "descricao": "INTERNA SIMPLES"
+          }
+        ]
+      },
+      {
+        "campo": "10041",
+        "descricao": "POSICAO",
+        "boletim": [
+          {
+            "id": 394,
+            "descricao": "SUPERPOSTA"
+          }
+        ]
+      },
+      {
+        "campo": "10042",
+        "descricao": "TIPO DE CONSTRUCAO",
+        "boletim": [
+          {
+            "id": 412,
+            "descricao": "ALVENARIA"
+          }
+        ]
+      },
+      {
+        "campo": "10043",
+        "descricao": "ESTRUTURA",
+        "boletim": [
+          {
+            "id": 451,
+            "descricao": "CONCRETO"
+          }
+        ]
+      },
+      {
+        "campo": "10044",
+        "descricao": "ESTADO DE CONSERVACAO",
+        "boletim": [
+          {
+            "id": 504,
+            "descricao": "BOM"
+          }
+        ]
+      },
+      {
+        "campo": "10045",
+        "descricao": "INSTALACAO  ELETRICA",
+        "boletim": [
+          {
+            "id": 551,
+            "descricao": "EMBUTIDA"
+          }
+        ]
+      },
+      {
+        "campo": "10046",
+        "descricao": "SITUACAO CONSTRUCAO",
+        "boletim": [
+          {
+            "id": 566,
+            "descricao": "FRENTE"
+          }
+        ]
+      },
+      {
+        "campo": "10047",
+        "descricao": "FACHADA",
+        "boletim": [
+          {
+            "id": 589,
+            "descricao": "ALINHADA"
+          }
+        ]
+      },
+      {
+        "campo": "10048",
+        "descricao": "SITUACAO DO IMOVEL",
+        "boletim": [
+          {
+            "id": 623,
+            "descricao": "OCUPADO"
+          }
+        ]
+      },
+      {
+        "campo": "10049",
+        "descricao": "ANO DE CONSTRUCAO",
+        "boletim": [
+          {
+            "id": 1,
+            "descricao": "OPCAO PADRAO E UNICA PARA ESTE TIPO DE PERGUNTA"
+          }
+        ]
+      },
+      {
+        "campo": "11049",
+        "descricao": "ESGOTO",
+        "boletim": [
+          {
+            "id": 18,
+            "descricao": "SIM"
+          }
+        ]
+      },
+      {
+        "campo": "11050",
+        "descricao": "AGUA",
+        "boletim": [
+          {
+            "id": 32,
+            "descricao": "SIM"
+          }
+        ]
+      },
+      {
+        "campo": "11051",
+        "descricao": "ILUMINACAO PUBLICA",
+        "boletim": [
+          {
+            "id": 55,
+            "descricao": "SIM"
+          }
+        ]
+      },
+      {
+        "campo": "11052",
+        "descricao": "CALCAMENTO",
+        "boletim": [
+          {
+            "id": 78,
+            "descricao": "SIM"
+          }
+        ]
+      },
+      {
+        "campo": "11053",
+        "descricao": "LIMPEZA PUBLICA",
+        "boletim": [
+          {
+            "id": 90,
+            "descricao": "SIM"
+          }
+        ]
+      },
+      {
+        "campo": "11054",
+        "descricao": "GALERIA PLUVIAL",
+        "boletim": [
+          {
+            "id": 119,
+            "descricao": "SIM"
+          }
+        ]
+      },
+      {
+        "campo": "11055",
+        "descricao": "REDE TELEFONICA",
+        "boletim": [
+          {
+            "id": 131,
+            "descricao": "SIM"
+          }
+        ]
+      },
+      {
+        "campo": "11056",
+        "descricao": "GUIAS SARJETAS",
+        "boletim": [
+          {
+            "id": 154,
+            "descricao": "SIM"
+          }
+        ]
+      },
+      {
+        "campo": "11057",
+        "descricao": "COLETA DE LIXO",
+        "boletim": [
+          {
+            "id": 177,
+            "descricao": "SIM"
+          }
+        ]
+      },
+      {
+        "campo": "12001",
+        "descricao": "ESGOTO",
+        "boletim": [
+          {
+            "id": 190,
+            "descricao": "SIM"
+          }
+        ]
+      },
+      {
+        "campo": "12002",
+        "descricao": "AGUA",
+        "boletim": [
+          {
+            "id": 218,
+            "descricao": "SIM"
+          }
+        ]
+      },
+      {
+        "campo": "12003",
+        "descricao": "AGUA DE POCO",
+        "boletim": [
+          {
+            "id": 240,
+            "descricao": "NAO"
+          }
+        ]
+      },
+      {
+        "campo": "12004",
+        "descricao": "LUZ/FORCA",
+        "boletim": [
+          {
+            "id": 255,
+            "descricao": "SIM"
+          }
+        ]
+      },
+      {
+        "campo": "12005",
+        "descricao": "TELEFONE",
+        "boletim": [
+          {
+            "id": 286,
+            "descricao": "NAO"
+          }
+        ]
+      },
+      {
+        "campo": "12006",
+        "descricao": "LIXO",
+        "boletim": [
+          {
+            "id": 290,
+            "descricao": "SIM"
+          }
+        ]
+      },
+      {
+        "campo": "12007",
+        "descricao": "FOSSA",
+        "boletim": [
+          {
+            "id": 327,
+            "descricao": "NAO"
+          }
+        ]
+      },
+      {
+        "campo": "13065",
+        "descricao": "AREA DO TERRENO",
+        "boletim": [
+          {
+            "id": 1,
+            "descricao": "198,00"
+          }
+        ]
+      },
+      {
+        "campo": "13066",
+        "descricao": "AREA DA UNIDADE",
+        "boletim": [
+          {
+            "id": 1,
+            "descricao": ""
+          }
+        ]
+      },
+      {
+        "campo": "13067",
+        "descricao": "AREA TOTAL DA EDIFICACAO",
+        "boletim": [
+          {
+            "id": 1,
+            "descricao": ""
+          }
+        ]
+      },
+      {
+        "campo": "13068",
+        "descricao": "TESTADA DO IMOVEL",
+        "boletim": [
+          {
+            "id": 1,
+            "descricao": "9,00"
+          }
+        ]
+      },
+      {
+        "campo": "13069",
+        "descricao": "TESTADA ILUMINACAO",
+        "boletim": [
+          {
+            "id": 1,
+            "descricao": "900"
+          }
+        ]
+      },
+      {
+        "campo": "13070",
+        "descricao": "TESTADA CALCAMENTO",
+        "boletim": [
+          {
+            "id": 1,
+            "descricao": "900"
+          }
+        ]
+      },
+      {
+        "campo": "13071",
+        "descricao": "TESTADA LIMPEZA",
+        "boletim": [
+          {
+            "id": 1,
+            "descricao": "900"
+          }
+        ]
+      },
+      {
+        "campo": "13072",
+        "descricao": "Nº DE UNIDADES",
+        "boletim": [
+          {
+            "id": 1,
+            "descricao": ""
+          }
+        ]
+      },
+      {
+        "campo": "13073",
+        "descricao": "TOTAL DA PROVA",
+        "boletim": [
+          {
+            "id": 1,
+            "descricao": "2907,0000"
+          }
+        ]
+      }
+    ]
+  },
+  "correspondencia": {
+    "ufCorrespondencia": null,
+    "municipioCorrespondencia": null,
+    "bairroCorrespondecia": null,
+    "logradouroCorrespondencia": null,
+    "numeroCorrespondencia": null,
+    "cepCorrespondencia": null,
+    "complementoCorrespondencia": null
+  },
+  "inscricoesAnteriores": []
+}

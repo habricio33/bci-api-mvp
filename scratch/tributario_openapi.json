@@ -1,0 +1,414 @@
+{
+  "openapi": "3.0.1",
+  "servers": [
+    {
+      "url": "/tributario-api-rest/api/rest/v1",
+      "description": "Servidor atual",
+      "variables": {}
+    }
+  ],
+  "tags": [
+    {
+      "name": "Autenticação",
+      "description": "Autenticação de usuários do sistema"
+    },
+    {
+      "name": "ITBI",
+      "description": "Endpoints do módulo de ITBI"
+    }
+  ],
+  "paths": {
+    "/auth/login": {
+      "post": {
+        "tags": [
+          "Autenticação"
+        ],
+        "summary": "Login do sistema",
+        "description": "Realiza autenticação de usuário e retorna token de acesso.",
+        "operationId": "login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sucesso"
+          }
+        }
+      }
+    },
+    "/itbi/consulta": {
+      "get": {
+        "tags": [
+          "ITBI"
+        ],
+        "summary": "Consulta ITBIs Paginado",
+        "description": "Consulta informações dos ITBIs de forma paginada, permitindo filtrar por ano, documento, inscrição municipal e código do ITBI.",
+        "operationId": "consultarItbi",
+        "parameters": [
+          {
+            "name": "ano",
+            "in": "query",
+            "description": "Ano de lançamento do ITBI",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "documento",
+            "in": "query",
+            "description": "Documento do adquirente, exemplo = 000.000.000-00",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "inscricao",
+            "in": "query",
+            "description": "Inscrição municipal do imóvel",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codigoItbi",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Dados de entrada inválidos ou inconsistentes com a regra de negócio.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExceptionDTO"
+                },
+                "example": {
+                  "data": null,
+                  "code": 400,
+                  "status": "Bad Request",
+                  "mensagem": "Requisição inválida",
+                  "erros": [
+                    "Requisição inválida, verifique os parâmetros informados."
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O registro informado ou algum recurso relacionado não foi encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExceptionDTO"
+                },
+                "example": {
+                  "data": null,
+                  "code": 404,
+                  "status": "Not Found",
+                  "mensagem": "Registro não encontrado",
+                  "erros": [
+                    "Nenhum registro localizado para os dados informado."
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno no servidor ao processar a solicitação.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExceptionDTO"
+                },
+                "example": {
+                  "data": null,
+                  "code": 500,
+                  "status": "Internal Server Error",
+                  "mensagem": "Erro inesperado no servidor",
+                  "erros": [
+                    "Falha na comunicação com o banco de dados."
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Sucesso"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/itbi/consulta/pagos": {
+      "get": {
+        "tags": [
+          "ITBI"
+        ],
+        "summary": "Consulta ITBIs pagos",
+        "description": "Consulta informações dos ITBIs pagos, permitindo filtrar por ano, documento, inscrição municipal e código do ITBI.",
+        "operationId": "consultarItbiPagos",
+        "parameters": [
+          {
+            "name": "ano",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "documento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "inscricao",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codigoItbi",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Dados de entrada inválidos ou inconsistentes com a regra de negócio.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExceptionDTO"
+                },
+                "example": {
+                  "data": null,
+                  "code": 400,
+                  "status": "Bad Request",
+                  "mensagem": "Requisição inválida",
+                  "erros": [
+                    "Requisição inválida, verifique os parâmetros informados."
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O registro informado ou algum recurso relacionado não foi encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExceptionDTO"
+                },
+                "example": {
+                  "data": null,
+                  "code": 404,
+                  "status": "Not Found",
+                  "mensagem": "Registro não encontrado",
+                  "erros": [
+                    "Nenhum registro localizado para os dados informado."
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno no servidor ao processar a solicitação.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExceptionDTO"
+                },
+                "example": {
+                  "data": null,
+                  "code": 500,
+                  "status": "Internal Server Error",
+                  "mensagem": "Erro inesperado no servidor",
+                  "erros": [
+                    "Falha na comunicação com o banco de dados."
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Sucesso"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
+    "/itbi/imovel/findby-inscricao": {
+      "get": {
+        "tags": [
+          "ITBI"
+        ],
+        "summary": "Consulta ITBIs detalhado por inscrição",
+        "description": "Consulta informações detalhadas dos ITBIs por inscrição.",
+        "operationId": "menusPortalCidadaoPaginado",
+        "parameters": [
+          {
+            "name": "inscricaoMunicipal",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Dados de entrada inválidos ou inconsistentes com a regra de negócio.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExceptionDTO"
+                },
+                "example": {
+                  "data": null,
+                  "code": 400,
+                  "status": "Bad Request",
+                  "mensagem": "Requisição inválida",
+                  "erros": [
+                    "Requisição inválida, verifique os parâmetros informados."
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O registro informado ou algum recurso relacionado não foi encontrado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExceptionDTO"
+                },
+                "example": {
+                  "data": null,
+                  "code": 404,
+                  "status": "Not Found",
+                  "mensagem": "Registro não encontrado",
+                  "erros": [
+                    "Nenhum registro localizado para os dados informado."
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno no servidor ao processar a solicitação.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExceptionDTO"
+                },
+                "example": {
+                  "data": null,
+                  "code": 500,
+                  "status": "Internal Server Error",
+                  "mensagem": "Erro inesperado no servidor",
+                  "erros": [
+                    "Falha na comunicação com o banco de dados."
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Sucesso"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "UsuarioDTO": {
+        "type": "object",
+        "properties": {
+          "usuario": {
+            "type": "string"
+          },
+          "senha": {
+            "type": "string"
+          }
+        }
+      },
+      "ExceptionDTO": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "string"
+          },
+          "mensagem": {
+            "type": "string"
+          },
+          "erros": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "description": "Insira o Bearer Token obtido na rota de login.",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

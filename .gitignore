@@ -1,0 +1,11 @@
+.env
+.env.backup
+config/database.php
+*.log
+api_error.log
+.DS_Store
+Thumbs.db
+docker/initdb/bci_cadastro_backup.dump
+docker/initdb/*.sql
+docker/initdb/*.sql.gz
+!docker/initdb/README.md

@@ -1,0 +1,11 @@
+.git
+.gitignore
+.env
+.vscode
+.idea
+*.log
+api_error.log
+docker/initdb/*.sql
+docker/initdb/*.sql.gz
+README.md
+DOCKER_GUIDE.md
